@@ -309,7 +309,44 @@
                 <label for="experience-years">Your Experience (in years) *</label><br>
                 <input type="number" id="experience-years" name="experience_years" min="0" max="50" step="1" value="0" required>
             </p>
+            <p>
+                <span>Gender *</span><br>
 
+                <input type="radio" id="gender-male" name="gender" value="male" required>
+                <label for="gender-male">Male</label>
+
+                <input type="radio" id="gender-female" name="gender" value="female">
+                <label for="gender-female">Female</label>
+
+                <input type="radio" id="gender-other" name="gender" value="other">
+                <label for="gender-other">Other</label>
+            </p>
+
+            <p>
+                <span>Interests</span><br>
+
+                <input type="checkbox" id="interest-web" name="interests" value="web-development" checked>
+                <label for="interest-web">Web Development</label><br>
+
+                <input type="checkbox" id="interest-ai" name="interests" value="artificial-intelligence">
+                <label for="interest-ai">Artificial Intelligence</label><br>
+
+                <input type="checkbox" id="interest-cloud" name="interests" value="cloud-and-devops">
+                <label for="interest-cloud">Cloud and DevOps</label><br>
+
+                <input type="checkbox" id="interest-hiring" name="interests" value="job-opportunity">
+                <label for="interest-hiring">Job Opportunity</label>
+            </p>
+
+            <p>
+                <label for="user-message">Your Message *</label><br>
+                <input type="text" id="user-message" name="user_message" placeholder="Type your message here" size="50" required>
+            </p>
+
+            <p>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </p>
         </form>
     </div>
 
