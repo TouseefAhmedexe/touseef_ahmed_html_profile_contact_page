@@ -164,6 +164,31 @@
                 </p>
             </fieldset>
         </form>
+    
+            <!-- ===== Group 5: Account and Preferences ===== -->
+            <fieldset>
+                <legend>Account and Preferences</legend>
+
+                <p>
+                    <label for="account-password">Password (8 to 20 characters) *</label><br>
+                    <input type="password" id="account-password" name="account_password" placeholder="Create a strong password" autocomplete="new-password" minlength="8" maxlength="20" required>
+                </p>
+
+                <p>
+                    <label for="technology-search">Search a Technology You Want to Learn</label><br>
+                    <input type="search" id="technology-search" name="technology_search" placeholder="Example: Angular" autocomplete="off" size="30">
+                </p>
+
+                <p>
+                    <label for="favorite-color">Favorite Color for Your Intern ID Card</label><br>
+                    <input type="color" id="favorite-color" name="favorite_color" value="#2f6fed">
+                </p>
+
+                <p>
+                    <label for="html-skill-level">Your HTML Skill Level (1 = Beginner, 10 = Expert)</label><br>
+                    <input type="range" id="html-skill-level" name="html_skill_level" min="1" max="10" step="1" value="5">
+                </p>
+            </fieldset>
     </div>
 
     <hr>
