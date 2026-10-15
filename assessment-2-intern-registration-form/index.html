@@ -143,6 +143,26 @@
                     <label for="mode-hybrid">Hybrid</label>
                 </p>
             </fieldset>
+    
+            <!--Group 4: Portfolio and Documents-->
+            <fieldset>
+                <legend>Portfolio and Documents</legend>
+
+                <p>
+                    <label for="portfolio-url">Portfolio Website URL</label><br>
+                    <input type="url" id="portfolio-url" name="portfolio_url" placeholder="https://www.yourportfolio.com" autocomplete="url" size="40">
+                </p>
+
+                <p>
+                    <label for="resume-file">Upload Resume (PDF, DOC or DOCX only) *</label><br>
+                    <input type="file" id="resume-file" name="resume_file" accept=".pdf,.doc,.docx" required>
+                </p>
+
+                <p>
+                    <label for="certificate-files">Upload Certificates (PDF, JPG or PNG, you can choose many)</label><br>
+                    <input type="file" id="certificate-files" name="certificate_files" accept=".pdf,.jpg,.jpeg,.png" multiple>
+                </p>
+            </fieldset>
         </form>
     </div>
 
