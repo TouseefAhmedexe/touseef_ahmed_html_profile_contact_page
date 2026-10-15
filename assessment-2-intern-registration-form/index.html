@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Intern registration form with grouped fields and an education summary table for the Bloomrix internship program.">
+    <meta name="author" content="Touseef Ahmed">
+    <title>Bloomrix Intern Registration Form | Touseef Ahmed</title>
+</head>
+
+<body>
+    <!--INTRODUCTION-->
+    <div id="introduction">
+        <h1>Bloomrix Intern Registration Form</h1>
+
+        <p>
+            Welcome to the <strong>Bloomrix internship program</strong> registration page.
+            This page has a <em>registration form</em> for new interns and an
+            <em>education summary table</em> that shows the courses and training completed so far.
+        </p>
+
+        <p>
+            <mark>Please read the steps below before you fill in the form.</mark>
+        </p>
+
+        <ol>
+            <li>Fill in every field marked with an asterisk (*).</li>
+            <li>Upload your resume as a PDF, DOC or DOCX file.</li>
+            <li>Accept the terms and conditions at the end of the form.</li>
+            <li>Click the Submit button to send your registration.</li>
+        </ol>
+
+        <p>
+            <small>Prepared by Touseef Ahmed | Bloomrix Internship, Assessment 2</small>
+        </p>
+
+        <p>
+            <a href="../index.html">Go back to my Day 1 profile page</a>
+        </p>
+    </div>
+
+    <hr>
+
+    <!--REGISTRATION FORM-->
+    <div id="registration">
+        <h2>Registration Form</h2>
+
+        <p>Fields marked with <strong>*</strong> are required.</p>
+
+        <form id="intern-registration-form" method="get">
+
+            <!-- ===== Group 1: Personal Information ===== -->
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <p>
+                    <label for="company-name">Internship Company</label><br>
+                    <input type="text" id="company-name" name="company_name" value="Bloomrix" disabled>
+                </p>
+
+                <p>
+                    <label for="first-name">First Name *</label><br>
+                    <input type="text" id="first-name" name="first_name" placeholder="Enter your first name" autocomplete="given-name" maxlength="30" required>
+                </p>
+
+                <p>
+                    <label for="last-name">Last Name *</label><br>
+                    <input type="text" id="last-name" name="last_name" placeholder="Enter your last name" autocomplete="family-name" maxlength="30" required>
+                </p>
+
+                <p>
+                    <label for="date-of-birth">Date of Birth *</label><br>
+                    <input type="date" id="date-of-birth" name="date_of_birth" min="1980-01-01" max="2008-10-15" autocomplete="bday" required>
+                </p>
+            </fieldset>
+
+            <!--Group 2: Contact Details-->
+            <fieldset>
+                <legend>Contact Details</legend>
+
+                <p>
+                    <label for="email-address">Email Address *</label><br>
+                    <input type="email" id="email-address" name="email_address" placeholder="example@gmail.com" autocomplete="email" required>
+                </p>
+
+                <p>
+                    <label for="phone-number">Phone Number *</label><br>
+                    <input type="tel" id="phone-number" name="phone_number" placeholder="+923001234567" autocomplete="tel" pattern="\+?[0-9]{11,13}" title="Enter 11 to 13 digits. A plus sign at the start is allowed." required>
+                </p>
+
+                <p>
+                    <label for="home-address">Home Address *</label><br>
+                    <textarea id="home-address" name="home_address" rows="4" cols="40" placeholder="House number, street, city, country" autocomplete="street-address" required></textarea>
+                </p>
+            </fieldset>
+
+            <!-- ===== Group 3: Training Preferences ===== -->
+            <fieldset>
+                <legend>Training Preferences</legend>
+
+                <p>
+                    <label for="interview-time">Preferred Interview Time (9:00 AM to 5:00 PM) *</label><br>
+                    <input type="time" id="interview-time" name="interview_time" min="09:00" max="17:00" step="1800" required>
+                </p>
+
+                <p>
+                    <label for="training-month">Preferred Training Month *</label><br>
+                    <input type="month" id="training-month" name="training_month" min="2026-11" max="2027-06" required>
+                </p>
+
+                <p>
+                    <label for="training-week">Preferred Training Week *</label><br>
+                    <input type="week" id="training-week" name="training_week" min="2026-W45" max="2027-W26" required>
+                </p>
+
+                <p>
+                    <label for="milestone-select">Starting Milestone *</label><br>
+                    <select id="milestone-select" name="starting_milestone" required>
+                        <option value="" selected>-- Select a milestone --</option>
+                        <optgroup label="Web Development Milestones">
+                            <option value="html-and-forms">HTML and Forms</option>
+                            <option value="css-styling">CSS Styling</option>
+                            <option value="javascript-basics">JavaScript Basics</option>
+                        </optgroup>
+                        <optgroup label="Advanced Milestones">
+                            <option value="backend-and-apis">Backend and REST APIs</option>
+                            <option value="database-design">Database Design</option>
+                            <option value="final-project">Final Project</option>
+                        </optgroup>
+                    </select>
+                </p>
+
+                <p>
+                    <span>Preferred Work Mode *</span><br>
+
+                    <input type="radio" id="mode-onsite" name="work_mode" value="on-site" required>
+                    <label for="mode-onsite">On-site</label>
+
+                    <input type="radio" id="mode-remote" name="work_mode" value="remote">
+                    <label for="mode-remote">Remote</label>
+
+                    <input type="radio" id="mode-hybrid" name="work_mode" value="hybrid">
+                    <label for="mode-hybrid">Hybrid</label>
+                </p>
+            </fieldset>
+    
+            <!--Group 4: Portfolio and Documents-->
+            <fieldset>
+                <legend>Portfolio and Documents</legend>
+
+                <p>
+                    <label for="portfolio-url">Portfolio Website URL</label><br>
+                    <input type="url" id="portfolio-url" name="portfolio_url" placeholder="https://www.yourportfolio.com" autocomplete="url" size="40">
+                </p>
+
+                <p>
+                    <label for="resume-file">Upload Resume (PDF, DOC or DOCX only) *</label><br>
+                    <input type="file" id="resume-file" name="resume_file" accept=".pdf,.doc,.docx" required>
+                </p>
+
+                <p>
+                    <label for="certificate-files">Upload Certificates (PDF, JPG or PNG, you can choose many)</label><br>
+                    <input type="file" id="certificate-files" name="certificate_files" accept=".pdf,.jpg,.jpeg,.png" multiple>
+                </p>
+            </fieldset>
+        </form>
+    
+            <!-- ===== Group 5: Account and Preferences ===== -->
+            <fieldset>
+                <legend>Account and Preferences</legend>
+
+                <p>
+                    <label for="account-password">Password (8 to 20 characters) *</label><br>
+                    <input type="password" id="account-password" name="account_password" placeholder="Create a strong password" autocomplete="new-password" minlength="8" maxlength="20" required>
+                </p>
+
+                <p>
+                    <label for="technology-search">Search a Technology You Want to Learn</label><br>
+                    <input type="search" id="technology-search" name="technology_search" placeholder="Example: Angular" autocomplete="off" size="30">
+                </p>
+
+                <p>
+                    <label for="favorite-color">Favorite Color for Your Intern ID Card</label><br>
+                    <input type="color" id="favorite-color" name="favorite_color" value="#2f6fed">
+                </p>
+
+                <p>
+                    <label for="html-skill-level">Your HTML Skill Level (1 = Beginner, 10 = Expert)</label><br>
+                    <input type="range" id="html-skill-level" name="html_skill_level" min="1" max="10" step="1" value="5">
+                </p>
+            </fieldset>
+    
+            <!--Group 6: Skills and Interests -->
+            <fieldset>
+                <legend>Skills and Interests</legend>
+
+                <p>
+                    <label for="known-technologies">Technologies You Know (hold Ctrl to select many)</label><br>
+                    <select id="known-technologies" name="known_technologies" multiple size="5">
+                        <option value="html5">HTML5</option>
+                        <option value="python">Python</option>
+                        <option value="csharp">C#</option>
+                        <option value="cpp">C++</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="typescript">TypeScript</option>
+                        <option value="sql">SQL</option>
+                    </select>
+                </p>
+
+                <p>
+                    <span>Areas You Want to Work On</span><br>
+
+                    <input type="checkbox" id="area-web" name="work_areas" value="web-development" checked>
+                    <label for="area-web">Web Development</label><br>
+
+                    <input type="checkbox" id="area-backend" name="work_areas" value="backend-development">
+                    <label for="area-backend">Backend Development</label><br>
+
+                    <input type="checkbox" id="area-ai" name="work_areas" value="ai-and-machine-learning">
+                    <label for="area-ai">AI and Machine Learning</label><br>
+
+                    <input type="checkbox" id="area-cloud" name="work_areas" value="cloud-and-devops">
+                    <label for="area-cloud">Cloud and DevOps</label><br>
+
+                    <input type="checkbox" id="area-database" name="work_areas" value="database-design">
+                    <label for="area-database">Database Design</label><br>
+
+                    <input type="checkbox" id="area-testing" name="work_areas" value="software-testing">
+                    <label for="area-testing">Software Testing</label>
+                </p>
+            </fieldset>
+
+            <!--Group 7: Terms and Conditions-->
+            <fieldset>
+                <legend>Terms and Conditions</legend>
+
+                <p>
+                    <input type="checkbox" id="terms-accepted" name="terms_accepted" value="accepted" required>
+                    <label for="terms-accepted">I confirm that the information is correct and I agree to the terms and conditions of the Bloomrix internship program. *</label>
+                </p>
+            </fieldset>
+
+            <p>
+                <button type="submit">Submit Registration</button>
+                <button type="reset">Reset Form</button>
+            </p>
+    </div>
+
+    <hr>
+
+    <!--EDUCATION SUMMARY TABLE-->
+    <div id="education-summary">
+        <h2>Education and Training Summary</h2>
+
+        <p>The table below lists the education and training completed before joining the internship.</p>
+
+        <table id="education-table" border="1">
+            <caption>Education and Training Summary of Touseef Ahmed</caption>
+
+            <colgroup>
+                <col>
+                <col span="2">
+                <col>
+                <col>
+            </colgroup>
+
+            <thead>
+                <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">Program or Course</th>
+                    <th scope="col">Institution</th>
+                    <th scope="col">Duration</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Bachelor of Science in Computer Science</td>
+                    <td>Namal University Mianwali</td>
+                    <td>2022 - 2026</td>
+                    <td>Completed</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Amal Fellowship (Career Prep Program)</td>
+                    <td>Amal Academy (Stanford-funded)</td>
+                    <td>Jul 2024 - Nov 2024</td>
+                    <td>Completed</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Aspire Leadership Certificate</td>
+                    <td>Harvard-sponsored Global Fellowship</td>
+                    <td>Aug 2024 - Dec 2024</td>
+                    <td>Completed</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Teaching Assistant (Programming Fundamentals and OOP)</td>
+                    <td>Namal University Mianwali</td>
+                    <td>Oct 2023 - Nov 2024</td>
+                    <td>Completed</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>DevOps Internship</td>
+                    <td>Ebryx Private Limited, Lahore</td>
+                    <td>Sep 2025 - Oct 2025</td>
+                    <td>Completed</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <th scope="row" colspan="4">Total Records</th>
+                    <td>5</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <hr>
+
+    <p>
+        <small>&copy; 2026 Touseef Ahmed. Built with HTML only.</small>
+    </p>
+
+</body>
+
+</html>
