@@ -189,6 +189,46 @@
                     <input type="range" id="html-skill-level" name="html_skill_level" min="1" max="10" step="1" value="5">
                 </p>
             </fieldset>
+    
+            <!-- ===== Group 6: Skills and Interests ===== -->
+            <fieldset>
+                <legend>Skills and Interests</legend>
+
+                <p>
+                    <label for="known-technologies">Technologies You Know (hold Ctrl to select many)</label><br>
+                    <select id="known-technologies" name="known_technologies" multiple size="5">
+                        <option value="html5">HTML5</option>
+                        <option value="python">Python</option>
+                        <option value="csharp">C#</option>
+                        <option value="cpp">C++</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="typescript">TypeScript</option>
+                        <option value="sql">SQL</option>
+                    </select>
+                </p>
+
+                <p>
+                    <span>Areas You Want to Work On</span><br>
+
+                    <input type="checkbox" id="area-web" name="work_areas" value="web-development" checked>
+                    <label for="area-web">Web Development</label><br>
+
+                    <input type="checkbox" id="area-backend" name="work_areas" value="backend-development">
+                    <label for="area-backend">Backend Development</label><br>
+
+                    <input type="checkbox" id="area-ai" name="work_areas" value="ai-and-machine-learning">
+                    <label for="area-ai">AI and Machine Learning</label><br>
+
+                    <input type="checkbox" id="area-cloud" name="work_areas" value="cloud-and-devops">
+                    <label for="area-cloud">Cloud and DevOps</label><br>
+
+                    <input type="checkbox" id="area-database" name="work_areas" value="database-design">
+                    <label for="area-database">Database Design</label><br>
+
+                    <input type="checkbox" id="area-testing" name="work_areas" value="software-testing">
+                    <label for="area-testing">Software Testing</label>
+                </p>
+            </fieldset>
     </div>
 
     <hr>
