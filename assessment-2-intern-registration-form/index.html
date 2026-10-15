@@ -93,6 +93,56 @@
                     <textarea id="home-address" name="home_address" rows="4" cols="40" placeholder="House number, street, city, country" autocomplete="street-address" required></textarea>
                 </p>
             </fieldset>
+
+            <!-- ===== Group 3: Training Preferences ===== -->
+            <fieldset>
+                <legend>Training Preferences</legend>
+
+                <p>
+                    <label for="interview-time">Preferred Interview Time (9:00 AM to 5:00 PM) *</label><br>
+                    <input type="time" id="interview-time" name="interview_time" min="09:00" max="17:00" step="1800" required>
+                </p>
+
+                <p>
+                    <label for="training-month">Preferred Training Month *</label><br>
+                    <input type="month" id="training-month" name="training_month" min="2026-11" max="2027-06" required>
+                </p>
+
+                <p>
+                    <label for="training-week">Preferred Training Week *</label><br>
+                    <input type="week" id="training-week" name="training_week" min="2026-W45" max="2027-W26" required>
+                </p>
+
+                <p>
+                    <label for="milestone-select">Starting Milestone *</label><br>
+                    <select id="milestone-select" name="starting_milestone" required>
+                        <option value="" selected>-- Select a milestone --</option>
+                        <optgroup label="Web Development Milestones">
+                            <option value="html-and-forms">HTML and Forms</option>
+                            <option value="css-styling">CSS Styling</option>
+                            <option value="javascript-basics">JavaScript Basics</option>
+                        </optgroup>
+                        <optgroup label="Advanced Milestones">
+                            <option value="backend-and-apis">Backend and REST APIs</option>
+                            <option value="database-design">Database Design</option>
+                            <option value="final-project">Final Project</option>
+                        </optgroup>
+                    </select>
+                </p>
+
+                <p>
+                    <span>Preferred Work Mode *</span><br>
+
+                    <input type="radio" id="mode-onsite" name="work_mode" value="on-site" required>
+                    <label for="mode-onsite">On-site</label>
+
+                    <input type="radio" id="mode-remote" name="work_mode" value="remote">
+                    <label for="mode-remote">Remote</label>
+
+                    <input type="radio" id="mode-hybrid" name="work_mode" value="hybrid">
+                    <label for="mode-hybrid">Hybrid</label>
+                </p>
+            </fieldset>
         </form>
     </div>
 
